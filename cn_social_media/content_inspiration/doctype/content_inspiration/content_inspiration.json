@@ -1,0 +1,138 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-13 14:23:59.134868",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "content_inspiration_section",
+  "url",
+  "section_break_nnca",
+  "column_break_flcc",
+  "reject",
+  "column_break_smjz",
+  "accept",
+  "section_break_bxmh",
+  "scial_media_account",
+  "section_break_fpmr",
+  "title",
+  "inspiration_source_link",
+  "column_break_gugz",
+  "content_type",
+  "inspiration_source_tag",
+  "section_break_rhxs",
+  "relevent_sources",
+  "content_inspiratin_synopsis"
+ ],
+ "fields": [
+  {
+   "fieldname": "content_inspiration_section",
+   "fieldtype": "Section Break",
+   "label": "Content Inspiration"
+  },
+  {
+   "fieldname": "url",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "label": "url"
+  },
+  {
+   "fieldname": "section_break_nnca",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_flcc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reject",
+   "fieldtype": "Button",
+   "label": "Reject"
+  },
+  {
+   "fieldname": "column_break_smjz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "accept",
+   "fieldtype": "Button",
+   "label": "Accept"
+  },
+  {
+   "fieldname": "section_break_bxmh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "scial_media_account",
+   "fieldtype": "Select",
+   "label": "Scial Media Account"
+  },
+  {
+   "fieldname": "section_break_fpmr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "fieldname": "inspiration_source_link",
+   "fieldtype": "Data",
+   "label": "Inspiration Source Link"
+  },
+  {
+   "fieldname": "column_break_gugz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "content_type",
+   "fieldtype": "Select",
+   "label": "Content Type",
+   "options": "Evergreen\nNews\nMotivational\nCase Study\nLead Magnet"
+  },
+  {
+   "fieldname": "inspiration_source_tag",
+   "fieldtype": "Data",
+   "label": "Inspiration Source Tag"
+  },
+  {
+   "fieldname": "section_break_rhxs",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "relevent_sources",
+   "fieldtype": "Data",
+   "label": "Relevent Sources"
+  },
+  {
+   "fieldname": "content_inspiratin_synopsis",
+   "fieldtype": "Text",
+   "label": "Content Inspiratin Synopsis"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-13 14:38:10.333390",
+ "modified_by": "Administrator",
+ "module": "Content Inspiration",
+ "name": "Content Inspiration",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
