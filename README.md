@@ -1,1 +1,7 @@
-# cn-social-media
+## Social Media
+
+Social Media
+
+#### License
+
+mit
