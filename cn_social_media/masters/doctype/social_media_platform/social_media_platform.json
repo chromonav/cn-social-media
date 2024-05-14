@@ -1,0 +1,54 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-14 10:44:29.751276",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "social_media_platform_section",
+  "url",
+  "social_media_platform"
+ ],
+ "fields": [
+  {
+   "fieldname": "social_media_platform_section",
+   "fieldtype": "Section Break",
+   "label": "Social Media Platform"
+  },
+  {
+   "fieldname": "url",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "label": "URL"
+  },
+  {
+   "fieldname": "social_media_platform",
+   "fieldtype": "Data",
+   "label": "Social Media Platform"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-14 10:59:31.581573",
+ "modified_by": "Administrator",
+ "module": "Masters",
+ "name": "Social Media Platform",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
