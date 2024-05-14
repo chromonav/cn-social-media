@@ -10,10 +10,11 @@
 
 frappe.ui.form.on('Content Inspiration', {
     refresh: function(frm) {
-        frm.fields_dict['accept'].$input.click(function() {
+        // Accept button click event
+        $(frm.fields_dict['accept'].input).click(function() {
             frappe.prompt([
-                {'fieldname': 'hook_title', 'fieldtype': 'Data', 'label': 'Hook title'},
-                {'fieldname': 'social_media_account', 'fieldtype': 'Select', 'label': 'Social Media Account', 'reqd': 1, 'options': ['Sample', 'test1', 'test2']},
+                {'fieldname': 'hook_title', 'fieldtype': 'Data', 'label': 'Hook Title'},
+                {'fieldname': 'social_media_account', 'fieldtype': 'Select', 'label': 'Social Media Account', 'reqd': 1, 'options': 'Test1\nTest2\nTest3'},
                 {'fieldname': 'notes', 'fieldtype': 'Text', 'label': 'Notes'},
             ],
             function(values){
@@ -42,12 +43,12 @@ frappe.ui.form.on('Content Inspiration', {
             },
             'New Post',
             'Create Post'
-            )
+            );
         });
 
-        frm.fields_dict['reject'].$input.click(function() {
+        // Reject button click event
+        $(frm.fields_dict['reject'].input).click(function() {
             frappe.msgprint('You clicked on Reject');
         });
     }
 });
-
