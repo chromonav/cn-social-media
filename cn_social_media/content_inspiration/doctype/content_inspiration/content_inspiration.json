@@ -41,7 +41,8 @@
   {
    "fieldname": "social_media_account",
    "fieldtype": "Select",
-   "label": "Social Media Account"
+   "label": "Social Media Account",
+   "options": "sample\ntest1\ntest2"
   },
   {
    "fieldname": "section_break_fmqz",
@@ -102,7 +103,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-14 12:29:04.890404",
+ "modified": "2024-05-14 13:17:12.698237",
  "modified_by": "Administrator",
  "module": "Content Inspiration",
  "name": "Content Inspiration",
