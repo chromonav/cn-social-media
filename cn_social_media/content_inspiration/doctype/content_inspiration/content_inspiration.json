@@ -1,0 +1,128 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-14 11:05:24.837242",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "content_inspiration_section",
+  "url",
+  "column_break_wdtx",
+  "accept",
+  "column_break_kput",
+  "reject",
+  "section_break_vuib",
+  "social_media_account",
+  "section_break_fmqz",
+  "title",
+  "inspiration_source_link",
+  "column_break_bvnb",
+  "content_type",
+  "inspiration_source_tag",
+  "section_break_crjw",
+  "content_inspiration_synopsis"
+ ],
+ "fields": [
+  {
+   "fieldname": "content_inspiration_section",
+   "fieldtype": "Section Break",
+   "label": "Content Inspiration"
+  },
+  {
+   "fieldname": "url",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "label": "URL"
+  },
+  {
+   "fieldname": "section_break_vuib",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "social_media_account",
+   "fieldtype": "Select",
+   "label": "Social Media Account",
+   "options": "sample\ntest1\ntest2"
+  },
+  {
+   "fieldname": "section_break_fmqz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "fieldname": "inspiration_source_link",
+   "fieldtype": "Data",
+   "label": "Inspiration Source Link"
+  },
+  {
+   "fieldname": "column_break_bvnb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "content_type",
+   "fieldtype": "Select",
+   "label": "Content Type",
+   "options": "Evergreen\nNews\nMotivational\nCase Study\nLead Magnet"
+  },
+  {
+   "fieldname": "inspiration_source_tag",
+   "fieldtype": "Data",
+   "label": "Inspiration Source Tag"
+  },
+  {
+   "fieldname": "section_break_crjw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "content_inspiration_synopsis",
+   "fieldtype": "Text",
+   "label": "Content Inspiration Synopsis"
+  },
+  {
+   "fieldname": "column_break_wdtx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "accept",
+   "fieldtype": "Button",
+   "label": "Accept"
+  },
+  {
+   "fieldname": "column_break_kput",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reject",
+   "fieldtype": "Button",
+   "label": "Reject"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-14 13:17:12.698237",
+ "modified_by": "Administrator",
+ "module": "Content Inspiration",
+ "name": "Content Inspiration",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,81 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-14 11:01:57.644095",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "social_media_account_section",
+  "url",
+  "section_break_zumg",
+  "account_name",
+  "column_break_wstz",
+  "account_url",
+  "column_break_kgho",
+  "social_media_platform"
+ ],
+ "fields": [
+  {
+   "fieldname": "social_media_account_section",
+   "fieldtype": "Section Break",
+   "label": "Social Media Account"
+  },
+  {
+   "fieldname": "url",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "label": "URL"
+  },
+  {
+   "fieldname": "section_break_zumg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "account_name",
+   "fieldtype": "Data",
+   "label": "Account Name"
+  },
+  {
+   "fieldname": "column_break_wstz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "account_url",
+   "fieldtype": "Data",
+   "label": "Account URL"
+  },
+  {
+   "fieldname": "column_break_kgho",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "social_media_platform",
+   "fieldtype": "Select",
+   "label": "Social Media Platform"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-14 11:03:52.887471",
+ "modified_by": "Administrator",
+ "module": "Masters",
+ "name": "Social Media Account",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
