@@ -7,10 +7,10 @@
  "field_order": [
   "content_inspiration_section",
   "url",
-  "section_break_egbv",
-  "reject",
-  "column_break_bcfk",
+  "column_break_wdtx",
   "accept",
+  "column_break_kput",
+  "reject",
   "section_break_vuib",
   "social_media_account",
   "section_break_fmqz",
@@ -33,24 +33,6 @@
    "fieldtype": "Data",
    "in_global_search": 1,
    "label": "URL"
-  },
-  {
-   "fieldname": "section_break_egbv",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "reject",
-   "fieldtype": "Button",
-   "label": "Reject"
-  },
-  {
-   "fieldname": "column_break_bcfk",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "accept",
-   "fieldtype": "Button",
-   "label": "Accept"
   },
   {
    "fieldname": "section_break_vuib",
@@ -98,11 +80,29 @@
    "fieldname": "content_inspiration_synopsis",
    "fieldtype": "Text",
    "label": "Content Inspiration Synopsis"
+  },
+  {
+   "fieldname": "column_break_wdtx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "accept",
+   "fieldtype": "Button",
+   "label": "Accept"
+  },
+  {
+   "fieldname": "column_break_kput",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reject",
+   "fieldtype": "Button",
+   "label": "Reject"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-14 11:10:28.518377",
+ "modified": "2024-05-14 12:29:04.890404",
  "modified_by": "Administrator",
  "module": "Content Inspiration",
  "name": "Content Inspiration",
