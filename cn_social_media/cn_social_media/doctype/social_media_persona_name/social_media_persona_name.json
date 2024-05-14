@@ -1,20 +1,14 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2024-05-14 10:44:29.751276",
+ "creation": "2024-05-14 15:47:38.271123",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "social_media_platform_section",
   "url",
-  "social_media_platform"
+  "social_media_persona_name"
  ],
  "fields": [
-  {
-   "fieldname": "social_media_platform_section",
-   "fieldtype": "Section Break",
-   "label": "Social Media Platform"
-  },
   {
    "fieldname": "url",
    "fieldtype": "Data",
@@ -22,17 +16,17 @@
    "label": "URL"
   },
   {
-   "fieldname": "social_media_platform",
+   "fieldname": "social_media_persona_name",
    "fieldtype": "Data",
-   "label": "Social Media Platform"
+   "label": "Social Media Persona Name"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-14 10:59:31.581573",
+ "modified": "2024-05-14 15:48:19.036287",
  "modified_by": "Administrator",
- "module": "Masters",
- "name": "Social Media Platform",
+ "module": "Cn Social Media",
+ "name": "Social Media Persona Name",
  "owner": "Administrator",
  "permissions": [
   {

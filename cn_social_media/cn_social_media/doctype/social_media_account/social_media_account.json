@@ -1,25 +1,19 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2024-05-14 11:01:57.644095",
+ "creation": "2024-05-14 15:48:40.904180",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "social_media_account_section",
   "url",
-  "section_break_zumg",
+  "section_break_zegt",
   "account_name",
-  "column_break_wstz",
+  "column_break_vjkz",
   "account_url",
-  "column_break_kgho",
+  "column_break_ssfg",
   "social_media_platform"
  ],
  "fields": [
-  {
-   "fieldname": "social_media_account_section",
-   "fieldtype": "Section Break",
-   "label": "Social Media Account"
-  },
   {
    "fieldname": "url",
    "fieldtype": "Data",
@@ -27,7 +21,7 @@
    "label": "URL"
   },
   {
-   "fieldname": "section_break_zumg",
+   "fieldname": "section_break_zegt",
    "fieldtype": "Section Break"
   },
   {
@@ -36,16 +30,16 @@
    "label": "Account Name"
   },
   {
-   "fieldname": "column_break_wstz",
+   "fieldname": "column_break_vjkz",
    "fieldtype": "Column Break"
   },
   {
    "fieldname": "account_url",
    "fieldtype": "Data",
-   "label": "Account URL"
+   "label": "Account Url"
   },
   {
-   "fieldname": "column_break_kgho",
+   "fieldname": "column_break_ssfg",
    "fieldtype": "Column Break"
   },
   {
@@ -56,9 +50,9 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-14 11:03:52.887471",
+ "modified": "2024-05-14 15:50:11.981292",
  "modified_by": "Administrator",
- "module": "Masters",
+ "module": "Cn Social Media",
  "name": "Social Media Account",
  "owner": "Administrator",
  "permissions": [

@@ -1,24 +1,23 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2024-05-14 11:24:11.444737",
+ "creation": "2024-05-14 15:55:37.134391",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "content_tab",
-  "social_media_post_section",
   "url",
   "social_media_title",
-  "section_break_cepg",
-  "content",
+  "content_section",
+  "text_editor_gkxa",
   "content_inspiration_synopsis",
-  "tab_2_tab",
+  "meta_data_tab",
   "social_media_account",
   "inspiration_source_link",
-  "column_break_nfqu",
+  "column_break_hscx",
   "content_type",
   "inspiration_source_tag",
-  "section_break_xvgf",
+  "section_break_qqje",
   "relevant_sources"
  ],
  "fields": [
@@ -28,14 +27,8 @@
    "label": "Content"
   },
   {
-   "fieldname": "social_media_post_section",
-   "fieldtype": "Section Break",
-   "label": "Social Media Post"
-  },
-  {
    "fieldname": "url",
    "fieldtype": "Data",
-   "in_global_search": 1,
    "label": "URL"
   },
   {
@@ -44,49 +37,17 @@
    "label": "Social Media Title"
   },
   {
-   "fieldname": "tab_2_tab",
+   "fieldname": "meta_data_tab",
    "fieldtype": "Tab Break",
    "label": "Meta Data"
   },
   {
-   "fieldname": "social_media_account",
-   "fieldtype": "Select",
-   "label": "Social Media Account"
+   "fieldname": "content_section",
+   "fieldtype": "Section Break",
+   "label": "Content"
   },
   {
-   "fieldname": "inspiration_source_link",
-   "fieldtype": "Data",
-   "label": "Inspiration Source Link"
-  },
-  {
-   "fieldname": "column_break_nfqu",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "content_type",
-   "fieldtype": "Select",
-   "label": "Content Type"
-  },
-  {
-   "fieldname": "inspiration_source_tag",
-   "fieldtype": "Data",
-   "label": "Inspiration Source Tag"
-  },
-  {
-   "fieldname": "section_break_xvgf",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "relevant_sources",
-   "fieldtype": "Data",
-   "label": "Relevant Sources"
-  },
-  {
-   "fieldname": "section_break_cepg",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "content",
+   "fieldname": "text_editor_gkxa",
    "fieldtype": "Text Editor",
    "label": "Content"
   },
@@ -94,13 +55,48 @@
    "fieldname": "content_inspiration_synopsis",
    "fieldtype": "Text",
    "label": "Content Inspiration Synopsis"
+  },
+  {
+   "fieldname": "social_media_account",
+   "fieldtype": "Select",
+   "label": "Social Media Account",
+   "options": "Test1\nTest2\nTest3"
+  },
+  {
+   "fieldname": "inspiration_source_link",
+   "fieldtype": "Data",
+   "label": "Inspiration Source Link"
+  },
+  {
+   "fieldname": "column_break_hscx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "content_type",
+   "fieldtype": "Select",
+   "label": "Content Type",
+   "options": "Evergreen\nNews\nMotivational\nCase Study\nLead Magnet"
+  },
+  {
+   "fieldname": "inspiration_source_tag",
+   "fieldtype": "Data",
+   "label": "Inspiration Source Tag"
+  },
+  {
+   "fieldname": "section_break_qqje",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "relevant_sources",
+   "fieldtype": "Data",
+   "label": "Relevant Sources"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-14 11:44:41.139739",
+ "modified": "2024-05-14 16:01:41.670246",
  "modified_by": "Administrator",
- "module": "Post Content",
+ "module": "Cn Social Media",
  "name": "Social Media Post",
  "owner": "Administrator",
  "permissions": [
