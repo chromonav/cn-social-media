@@ -55,6 +55,17 @@ def get_data(filters):
     # Fetch all employees
     employees = frappe.get_all('Employee', fields=['name', 'employee_name'])
 
+
+
+
+    # if filters.get("project"):
+    #    employees = [e for e in employees if frappe.db.exists('Project User', {'parent': filters['project'], 'user': e['name']})]
+
+
+
+
+
+
     # Fetch timesheet data
     sql_conditions = []
     if filters.get("from_date"):
