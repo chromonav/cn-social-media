@@ -52,52 +52,67 @@ def get_columns(filters):
 
 
 def get_data(filters):
-    sql_conditions = []
-    
-    if filters.get("employee"):
-        sql_conditions.append(f"ts.employee = '{filters['employee']}'")
+    # Fetch all employees
+    employees = frappe.get_all('Employee', fields=['name', 'employee_name'])
 
+    # Fetch timesheet data
+    sql_conditions = []
     if filters.get("from_date"):
         sql_conditions.append(f"DATE(td.from_time) >= DATE('{filters['from_date']}')")
-
     if filters.get("to_date"):
         sql_conditions.append(f"DATE(td.to_time) <= DATE('{filters['to_date']}')")
-    
     if filters.get("project"):
-        sql_conditions.append(f"td.project = '{filters['project']}'")    
-
-
+        sql_conditions.append(f"td.project = '{filters['project']}'")   
     where_clause = " AND ".join(sql_conditions)
+    if where_clause:
+        where_clause = "WHERE " + where_clause
     sql_query = f"""
         SELECT
             ts.name AS timesheet,
-            e.name AS employee,
+            ts.employee AS employee,
             ts.employee_name,
             td.from_time AS date,
             td.project,
             td.hours AS working_hours,
             td.description AS task_d,
             td.activity_type AS activity,
-            ts.total_hours
+            ts.total_hours,
+            COALESCE(ts.name, '') AS timesheet,
+            CASE WHEN ts.name IS NULL THEN 0 ELSE 1 END AS is_timesheet_filled
         FROM
-            `tabEmployee` e
-        LEFT JOIN
-            `tabTimesheet` ts ON e.name = ts.employee
+            `tabTimesheet` ts
         LEFT JOIN
             `tabTimesheet Detail` td ON ts.name = td.parent
-        {'WHERE e.custom_check_timesheet_filled=1 AND ' + where_clause if where_clause else ''}
+        {where_clause}
     """
+    timesheet_data = frappe.db.sql(sql_query,as_dict=1)
 
+    # Combine employees and timesheet data
+    data = []
+    for employee in employees:
+        employee_timesheet_data = [d for d in timesheet_data if d['employee'] == employee['name']]
+        if employee_timesheet_data:
+            data.extend(employee_timesheet_data)
+        else:
+            # If no timesheet data for this employee, add a placeholder
+            data.append({
+                'employee': employee['name'],
+                'employee_name': employee['employee_name'],
+                'date': None,
+                'project': None,
+                'working_hours': None,
+                'task_d': None,
+                'activity': None,
+                'total_hours': None,
+                'timesheet': None,
+                'is_timesheet_filled': 0
+            })
 
-    # print(sql_query)
-    data = frappe.db.sql(sql_query,as_dict=1)
-    frappe.logger("ss").exception(data)
-    print(data)
     return group_by(data)
 
 
 def group_by(data):
-    unique_dates = list(set([getdate(row.get('date')) for row in data]))
+    unique_dates = list(set([getdate(row.get('date')) for row in data if row.get('date') is not None]))
     grouped_data = []
     for date in sorted(unique_dates):
         date_row = {
@@ -115,27 +130,30 @@ def group_by(data):
                     continue
                 if getdate(row.get('date')) != getdate(date):
                     continue
-                total_hours += float(row.get('working_hours'))
+                total_hours += float(row.get('working_hours') or 0)  # Handle None values
                 _row = {}
                 _row['employee'] = None
                 _row['date'] = None
                 _row['activity'] = row.get('activity')
                 _row['description'] = row.get('task_d')
                 _row["indent"] = 1
-                _row['working_hours'] = str(row.get('working_hours')) + ' Hrs'
+                _row['working_hours'] = str(row.get('working_hours') or 0) + ' Hrs'  # Handle None values
                 _row["is_group"] = 0
                 child_data.append(_row)
-                
+            
+            employee_name = employee[1]+' ('+employee[0]+')'
+            if total_hours == 0:
+                employee_name = f"<font color ='red'>{employee_name}</font>"
+
             data_row_employee = {
-                "employee": employee[1]+' ('+employee[0]+')',
+                "employee": employee_name,
                 "employee_id": employee[0],
                 "activity":f"",
                 "description": 'Total Hours: '+ str(total_hours),
                 "indent": 0,
                 "is_group": 1,
-            } 
-            grouped_data.append(data_row_employee)  
+            }
+            grouped_data.append(data_row_employee) 
             grouped_data.extend(child_data)
-    # print(grouped_data)
     return grouped_data
 
