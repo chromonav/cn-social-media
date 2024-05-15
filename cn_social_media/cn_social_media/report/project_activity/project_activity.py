@@ -92,6 +92,8 @@ def get_data(filters):
     for employee in employees:
         employee_timesheet_data = [d for d in timesheet_data if d['employee'] == employee['name']]
         if employee_timesheet_data:
+            
+
             data.extend(employee_timesheet_data)
         else:
             # If no timesheet data for this employee, add a placeholder
@@ -108,10 +110,10 @@ def get_data(filters):
                 'is_timesheet_filled': 0
             })
 
-    return group_by(data)
+    return group_by(data, filters)
 
 
-def group_by(data):
+def group_by(data, filters):
     unique_dates = list(set([getdate(row.get('date')) for row in data if row.get('date') is not None]))
     grouped_data = []
     for date in sorted(unique_dates):
@@ -136,13 +138,14 @@ def group_by(data):
                 _row['date'] = None
                 _row['activity'] = row.get('activity')
                 _row['description'] = row.get('task_d')
+                _row['project'] = row.get('project')
                 _row["indent"] = 1
                 _row['working_hours'] = str(row.get('working_hours') or 0) + ' Hrs'  # Handle None values
                 _row["is_group"] = 0
                 child_data.append(_row)
             
             employee_name = employee[1]+' ('+employee[0]+')'
-            if total_hours == 0:
+            if total_hours == 0 or (filters.get("project") and not any(d.get('project') == filters['project'] for d in child_data)):
                 employee_name = f"<font color ='red'>{employee_name}</font>"
 
             data_row_employee = {
@@ -153,7 +156,27 @@ def group_by(data):
                 "indent": 0,
                 "is_group": 1,
             }
-            grouped_data.append(data_row_employee) 
-            grouped_data.extend(child_data)
+            if filters.get("project"):
+                # If a project is specified, only add employees who have timesheet data for that project
+                if any(d.get('project') == filters['project'] for d in data if d.get('employee') == employee[0]):
+                    grouped_data.append(data_row_employee)
+                    if child_data:
+                        grouped_data.extend(child_data)
+                    else:
+                        grouped_data.append({
+                            'employee': None,
+                            'date': None,
+                            'activity': None,
+                            'description': None,
+                            'project': None,
+                            'working_hours': None,
+                            "indent": 1,
+                            "is_group": 0
+                        })
+            else:
+                # If no project is specified, add all employees
+                grouped_data.append(data_row_employee)
+                grouped_data.extend(child_data)
     return grouped_data
+
 
