@@ -4,4 +4,4 @@ Cn Social Media
 
 #### License
 
-mit
+Propreitory
