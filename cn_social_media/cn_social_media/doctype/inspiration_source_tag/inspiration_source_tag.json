@@ -1,0 +1,31 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-22 13:45:39.418570",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "tag1"
+ ],
+ "fields": [
+  {
+   "fieldname": "tag1",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "tag1",
+   "options": "Social Media Account"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-05-22 13:49:32.891806",
+ "modified_by": "Administrator",
+ "module": "Cn Social Media",
+ "name": "Inspiration Source Tag",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

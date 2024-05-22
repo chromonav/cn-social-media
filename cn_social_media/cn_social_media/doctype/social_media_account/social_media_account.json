@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:account_name",
  "creation": "2024-05-14 15:48:40.904180",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -27,7 +28,8 @@
   {
    "fieldname": "account_name",
    "fieldtype": "Data",
-   "label": "Account Name"
+   "label": "Account Name",
+   "unique": 1
   },
   {
    "fieldname": "column_break_vjkz",
@@ -45,15 +47,17 @@
   {
    "fieldname": "social_media_platform",
    "fieldtype": "Select",
-   "label": "Social Media Platform"
+   "label": "Social Media Platform",
+   "options": "Test1\nTest2\nTest3\nTest4"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-14 15:50:11.981292",
+ "modified": "2024-05-22 12:27:46.811386",
  "modified_by": "Administrator",
  "module": "Cn Social Media",
  "name": "Social Media Account",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

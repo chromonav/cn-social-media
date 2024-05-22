@@ -11,10 +11,10 @@
 frappe.ui.form.on('Content Inspiration', {
     refresh: function(frm) {
         // Accept button click event
-        $(frm.fields_dict['accept'].input).click(function() {
+        frm.add_custom_button(__('Accept'), function(){
             frappe.prompt([
                 {'fieldname': 'hook_title', 'fieldtype': 'Data', 'label': 'Hook Title'},
-                {'fieldname': 'social_media_account', 'fieldtype': 'Select', 'label': 'Social Media Account', 'reqd': 1, 'options': 'Test1\nTest2\nTest3'},
+                {'fieldname': 'social_media_account', 'fieldtype': 'Link', 'label': 'Social Media Account', 'reqd': 1, 'options': 'Social Media Account'},
                 {'fieldname': 'notes', 'fieldtype': 'Text', 'label': 'Notes'},
             ],
             function(values){
@@ -47,8 +47,9 @@ frappe.ui.form.on('Content Inspiration', {
         });
 
         // Reject button click event
-        $(frm.fields_dict['reject'].input).click(function() {
+        frm.add_custom_button(__('Reject'), function(){
             frappe.msgprint('You clicked on Reject');
-        });
+        })
+
     }
 });

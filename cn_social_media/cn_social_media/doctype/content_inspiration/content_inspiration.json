@@ -1,15 +1,12 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:title",
  "creation": "2024-05-14 15:50:45.828532",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "url",
-  "column_break_pzuq",
-  "reject",
-  "column_break_cume",
-  "accept",
   "section_break_wttx",
   "social_media_account",
   "section_break_lqxx",
@@ -29,32 +26,14 @@
    "label": "URL"
   },
   {
-   "fieldname": "column_break_pzuq",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "reject",
-   "fieldtype": "Button",
-   "label": "Reject"
-  },
-  {
-   "fieldname": "column_break_cume",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "accept",
-   "fieldtype": "Button",
-   "label": "Accept"
-  },
-  {
    "fieldname": "section_break_wttx",
    "fieldtype": "Section Break"
   },
   {
    "fieldname": "social_media_account",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Social Media Account",
-   "options": "Test1\nTest2\nTest3"
+   "options": "Social Media Account"
   },
   {
    "fieldname": "section_break_lqxx",
@@ -63,7 +42,8 @@
   {
    "fieldname": "title",
    "fieldtype": "Data",
-   "label": "Title"
+   "label": "Title",
+   "unique": 1
   },
   {
    "fieldname": "inspiration_source_link",
@@ -82,8 +62,9 @@
   },
   {
    "fieldname": "inspiration_source_tag",
-   "fieldtype": "Data",
-   "label": "Inspiration Source Tag"
+   "fieldtype": "Table MultiSelect",
+   "label": "Inspiration Source Tag",
+   "options": "Inspiration Source Tag"
   },
   {
    "fieldname": "section_break_jpjn",
@@ -97,10 +78,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-14 15:54:59.040990",
+ "modified": "2024-05-22 14:01:06.106209",
  "modified_by": "Administrator",
  "module": "Cn Social Media",
  "name": "Content Inspiration",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

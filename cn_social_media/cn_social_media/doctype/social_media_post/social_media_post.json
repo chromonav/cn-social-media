@@ -58,9 +58,9 @@
   },
   {
    "fieldname": "social_media_account",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Social Media Account",
-   "options": "Test1\nTest2\nTest3"
+   "options": "Social Media Account"
   },
   {
    "fieldname": "inspiration_source_link",
@@ -79,8 +79,9 @@
   },
   {
    "fieldname": "inspiration_source_tag",
-   "fieldtype": "Data",
-   "label": "Inspiration Source Tag"
+   "fieldtype": "Table MultiSelect",
+   "label": "Inspiration Source Tag",
+   "options": "Inspiration Source Tag"
   },
   {
    "fieldname": "section_break_qqje",
@@ -94,7 +95,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-14 16:01:41.670246",
+ "modified": "2024-05-22 14:06:00.212231",
  "modified_by": "Administrator",
  "module": "Cn Social Media",
  "name": "Social Media Post",
