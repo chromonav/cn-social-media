@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:social_media_title",
  "creation": "2024-05-14 15:55:37.134391",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -34,7 +35,8 @@
   {
    "fieldname": "social_media_title",
    "fieldtype": "Data",
-   "label": "Social Media Title"
+   "label": "Social Media Title",
+   "unique": 1
   },
   {
    "fieldname": "meta_data_tab",
@@ -58,9 +60,9 @@
   },
   {
    "fieldname": "social_media_account",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Social Media Account",
-   "options": "Test1\nTest2\nTest3"
+   "options": "Social Media Account"
   },
   {
    "fieldname": "inspiration_source_link",
@@ -79,8 +81,9 @@
   },
   {
    "fieldname": "inspiration_source_tag",
-   "fieldtype": "Data",
-   "label": "Inspiration Source Tag"
+   "fieldtype": "Table MultiSelect",
+   "label": "Inspiration Source Tag",
+   "options": "Inspiration Source Tag"
   },
   {
    "fieldname": "section_break_qqje",
@@ -94,10 +97,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-14 16:01:41.670246",
+ "modified": "2024-05-22 16:22:40.060462",
  "modified_by": "Administrator",
  "module": "Cn Social Media",
  "name": "Social Media Post",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
